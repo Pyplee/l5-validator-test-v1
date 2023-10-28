@@ -16,10 +16,7 @@ class ObjectSchrema {
       return false;
     }
 
-    if (schemaKeys.every((key) => this.validations[key].isValid(data[key]))) {
-      return true;
-    }
-    return false;
+    return schemaKeys.every((key) => this.validations[key].isValid(data[key]));
   }
 }
 
